@@ -1,0 +1,298 @@
+{
+	"info": {
+		"_postman_id": "3e3f7805-8da3-49a5-a63e-887e3b1c4cde",
+		"name": "knightsbridge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"DEF\",\r\n    \"email\" : \"def@gmail.com\",\r\n    \"password\" : \"def@123\",\r\n    \"c_password\" : \"def@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"abc@gmail.com\",\r\n    \"password\" : \"abc@123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZDY4MTg3YjM5NDFiY2JhZjNkNDAzNzZmMWZmOGYzYjhiNWM4ZDM0OWZjODk4ODA5MzI5ODMxM2QwYTU3NDBlYmM5MDk3YmI5ZmRmMDBlMzIiLCJpYXQiOjE2MDEwMDU0OTksIm5iZiI6MTYwMTAwNTQ5OSwiZXhwIjoxNjMyNTQxNDk5LCJzdWIiOiJVU1IwMDAxIiwic2NvcGVzIjpbXX0.tsdRvotaVwBqH0NMTC1OJ_1SNy4eOs__z5T6VJENIt8-gLuvlE6fRkEkXbiSg26Mv1TmC_kDvYqijRvCoamxMULgJN4FFnvUE1IN68rbkvlytni-rTaoJXiRI6_aOZYxWNi-syNEXd4c0svp8_kcHMTr9ky2X0nnZuwW5uoc-UewpZpontrjhhoFw7AICBrxAaNwckHpvmELqRG7K80fx3lZSrTZoRmWcL80T2Urerm5F7x9ZDTgFQhHB73c4F7HaloM3xbY7ALL9NH9NfEFaMLUaF2lpTCcEvwkUQ4tOSgWuc2JQ0XiEJjeQytXjEPEa4LtDL7cN7-kRhDjaZQ3_f0KTdnGG65kUae8JMUSeXNAopKUBxN1xCCaozAPiExzwuGsYtOH92gIgdEuP9njH76BWi93s23f9Kh3L3shdBoOI1zhLi_P4WKCZBpFj6q7ccIYCjMBtoJ94RV18ActBRG_0reaL8R7C2HiqZa0oZfubJsOKlgkmrEOaUuEEhGEDy-hd9WF1ClPrXHJZb9YecfjltRvqm7mAmj_XOx4WIbQej_YvY6I-y2ARlp-EkAY2RuHxHnNDhqy-ErCDuyFaNXmVV2N258PBRUUXZPVUdhRq1nhxiQO_aFxe5R69tywuQaNry2BcmSNRQhRUZjJmGZLqbcRZiobqYtfukyPlNU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Samsung Galaxy Tab S6 Lite",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "73900.00",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/ipk computer/Pictures/temp/Samsung Galaxy Tab S6 Lite.jpg"
+						},
+						{
+							"key": "stock",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Samsung Galaxy Tab S6 Lite isn't the perfect mid-range slate, but there's still a lot here to like, and if the features on offer here, like the S Pen, good screen and low price, appeal to you, then it's certainly worth considering as an alternative to the entry-level iPad.",
+							"type": "text"
+						},
+						{
+							"key": "is_active",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Details of a product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGFkNDJjYjA1ZjQ5ZGE2OGFhZjU1YTZiODhjMWI5NjYzMDBkZTQ3ZjA3ZjBmNzAwZjEwNjY4YzlmYThlZjJmNjM2NGJiOGZiY2ViOTQxNTgiLCJpYXQiOjE2MDExMTczMTcsIm5iZiI6MTYwMTExNzMxNywiZXhwIjoxNjMyNjUzMzE3LCJzdWIiOiJVU1IwMDAxIiwic2NvcGVzIjpbXX0.Bm9uDv27fW0eD4IFSAHARoIyC-YwAwANQBOzOv3lJf0U-nLDoMTjXbM1OODQMN4USiKF3q-b9Xe7MSMgzldDHRTRmNQUO60SRhUJyw5Uu3eHQfcsyX9okJqJT5j3sI9VnVdk7wtWaoM--2GGYX77IDEt9quF7yhp8b6Rb9tiE2kiW7u3-zIgAWVKy0urM_VCmM6MLQtf1VsB9KVBbsojTXYlJnVvRFMIkjgyPDu9SHgU9VyFce11tf-XY0qJtN8bneWGscsZGr1AfydJmi0Ki5B5j6IFA-1MJltXjMnbIfpYYSfexYrBpb-yWDLvX7hfgn9OpAGzLsMZ3VLCL5XUTa64eiFnB7BZXYH447ygnk-Vd28JfOhJCpVfsYM_hc93YUS73He_IUgqnmfqqifbrhvs-oCsJczxa27NOBRYDqW7Si2OlbcxN-81EXlnCGwv7uSBAk9a2zO3SbrEvvLUnEUMMnKo5h8jELh5ivGmCazA-ZHOdWyZCCtWuK8rd6SKRfu-yNflooYfMnwytvOfPbEsKGTlsnhaPneGTSQdd_53O49396UYWy_K4LTU1T1tqBqQiPmvNLVYoGbk4PZxm7vxwIqAWESWHpcluMegkgUyWkfX6TpHMoZgQcupJRlaxVf7D03lryb3JXpoO2IddAXjxGz2sIVwD3DLKRA0QZs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/products/PRO0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"PRO0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product List For Seller",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/userproducts/USR0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"userproducts",
+						"USR0001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sellers Details For a Product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMGFkNDJjYjA1ZjQ5ZGE2OGFhZjU1YTZiODhjMWI5NjYzMDBkZTQ3ZjA3ZjBmNzAwZjEwNjY4YzlmYThlZjJmNjM2NGJiOGZiY2ViOTQxNTgiLCJpYXQiOjE2MDExMTczMTcsIm5iZiI6MTYwMTExNzMxNywiZXhwIjoxNjMyNjUzMzE3LCJzdWIiOiJVU1IwMDAxIiwic2NvcGVzIjpbXX0.Bm9uDv27fW0eD4IFSAHARoIyC-YwAwANQBOzOv3lJf0U-nLDoMTjXbM1OODQMN4USiKF3q-b9Xe7MSMgzldDHRTRmNQUO60SRhUJyw5Uu3eHQfcsyX9okJqJT5j3sI9VnVdk7wtWaoM--2GGYX77IDEt9quF7yhp8b6Rb9tiE2kiW7u3-zIgAWVKy0urM_VCmM6MLQtf1VsB9KVBbsojTXYlJnVvRFMIkjgyPDu9SHgU9VyFce11tf-XY0qJtN8bneWGscsZGr1AfydJmi0Ki5B5j6IFA-1MJltXjMnbIfpYYSfexYrBpb-yWDLvX7hfgn9OpAGzLsMZ3VLCL5XUTa64eiFnB7BZXYH447ygnk-Vd28JfOhJCpVfsYM_hc93YUS73He_IUgqnmfqqifbrhvs-oCsJczxa27NOBRYDqW7Si2OlbcxN-81EXlnCGwv7uSBAk9a2zO3SbrEvvLUnEUMMnKo5h8jELh5ivGmCazA-ZHOdWyZCCtWuK8rd6SKRfu-yNflooYfMnwytvOfPbEsKGTlsnhaPneGTSQdd_53O49396UYWy_K4LTU1T1tqBqQiPmvNLVYoGbk4PZxm7vxwIqAWESWHpcluMegkgUyWkfX6TpHMoZgQcupJRlaxVf7D03lryb3JXpoO2IddAXjxGz2sIVwD3DLKRA0QZs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/productusers/PRO0001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"productusers",
+						"PRO0001"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,29 @@
+
+1. Get details of a product 
+	GET - http://localhost:8000/api/products/PRO0001
+
+2. Get product list by seller 
+	GET - http://localhost:8000/api/userproducts/USR0001
+
+3. Get seller details for a product 
+	GET - http://localhost:8000/api/productusers/PRO0001
+
+Login
+	POST - http://localhost:8000/api/login
+	{
+    		"email" : "abc@gmail.com",
+    		"password" : "abc@123"
+	}
+
+REGISTER
+	POST - http://localhost:8000/api/register
+	{
+    		"name" : "DEF",
+		"email" : "def@gmail.com",
+		"password" : "def@123",
+		"c_password" : "def@123"
+	}
+
+STORE PRODUCT
+	POST - http://localhost:8000/api/products
+
